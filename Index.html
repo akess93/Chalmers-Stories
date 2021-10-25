@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Chalmers Stories</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.CSS">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+  <!-- Result Function -->
+  <script type="text/javascript">
+
+    function Result() {
+        var result = "";
+        var message = document.getElementById("message");
+        var result1 = parseInt(document.getElementById("result1").value);
+        var result2 = parseInt(document.getElementById("result2").value);
+        var result3 = parseInt(document.getElementById("result3").value);
+        var result4 = parseInt(document.getElementById("result4").value);
+
+
+        if (result1 <= 5) {     
+            result = result + "Due to bad prioritizing you didn’t graduate and will be back next semester completing parts of courses and also conducting your final thesis. Go celebrate, you have nothing else to do anyway. ";
+        } else if (result1 > 5 && result1 <= 10) {     
+            result = result + "Wow...you barely made it! Though you have some examinations left and need to spend your summer studying for the re-examination in august! Don’t forget to sign up in time. No time for celebration. "; 
+        } else {
+            result = result + "Congratulations! You graduated with the highest grade and your thesis work was praised by teachers and will be used as an example for upcoming students. You have been asked to present your work at an upcoming conference abroad, so you have some preparations to do. It’s exciting but doesn’t leave a lot of room for celebration. ";    
+        }
+
+        if (result2 <= 5) {
+            result = result + "You did not find anyone to collaborate with for your final thesis and had to do it on your own and therefore could not find any external company to work with. You ended up depressed and burnt out due to the loneliness and stress. ";
+        } else if (result2 > 5 && result2 <= 10) {
+            result = result + "At the last minute you found someone to work on with your thesis but due to the short time you had to select the first and best topic and could not find any external company to work with. Due to lack of motivation you were not proud of your work and will probably never talk to your partner again after this. "; 
+        } else {
+            result = result + "Your commitment during your years at Chalmers has landed you a position as vice president for Chalmers student union and you are excited to continue advancing in this organisation. You just need to graduate first, hope you managed to find time for studies as well. "; 
+        }
+
+        if (result3 <= 5) {
+            result = result + "Your bad physics and lack of hobbies have impacted you negatively. Your time at Chalmers will not be remembered well and you have been recommended to start medicating for this during the summer. Maybe you should try padel tennis? ";
+        } else if (result3 > 5 && result3 <= 10) {
+            result = result + "You have not been able to find time for regular training or hobbies but managed to fit in occasional rounds of padel tennis with random people which you found on a group on facebook. This is a great start and hopefully starting a new job will push you a bit further. "; 
+        } else {
+            result = result + "Impressive! Your hard work at Fysiken during your time at Chalmers have landed you a sponsorship and you have been asked if you would like to take it to the next level but this demands your full time and devotion. This has left you with a hard choice, what do you do? "; 
+        }
+
+        if (result4 <= 5) {
+            result = result + "Your family is far away and you do not feel like visiting them and they don’t push you to it either. All of your friends are celebrating graduation with their families and you are at home waiting for them to be done. They cancelled on you at the last minute because it got too late. Now you're home alone playing minecraft and super liking on Tinder on graduation day. ";
+        } else if (result4 > 5 && result4 <= 10) {
+            result = result + "You have decided to travel to your family during the celebration because they could not find the time to visit you. They live far away and you have to turn down celebrating with your friends at campus. However, you don’t feel like staying with them the whole summer and will be back in your student housing shortly. You lack a distinct plan for the future but wish to stay in Gothenburg but you have to wait a long time to get a better apartment, so you are left conflicted and confused. "; 
+        } else {
+            result = result + "Your family expectations are really high and they want to host a big celebration of your achievements with all your friends and close family. They have planned a full weekend of activities and you can’t even find the time to join your friends for a beer. Your family expects you to return to your hometown and have planned for you to look at apartments when you come back. "; 
+        }
+
+        message.innerHTML = result;
+}
+</script>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#gamerules" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GAME RULES</a>
+    <!-- <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a> -->
+    <a href="#result" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESULT</a>
+    <a href="#team" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
+    <a href="#rulebooklet" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RULE BOOKLET</a>
+    <!-- <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      </div>
+    </div> -->
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#team" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEAM</a>
+  <a href="#gamerules" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GAME RULES</a>
+  <!-- <a href="#crew" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a> -->
+  <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
+</div>
+
+<!-- Hero Images heading -->
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Chalmers Stories</h1>
+    <p><i>We love boardgames, do you?</i></p>
+    <a href="#gamerules" target="_blank">Show me how it works!</a>
+  </div>
+</div>
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+
+<!-- The Game Rules Section -->
+  <div class="w3-white" id="gamerules">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">How does it work?</h2>
+      <p class="w3-opacity w3-center"><i>The object of the game is to explore life as a student at Chalmers University of Technology during a set number of rounds that represents a full study period at Chalmers. During the game the players will be met with different opportunities based on real life events, and make choices that depending on both chance and character traits will give different outcomes.
+
+        The game introduces the players to how Chalmers life can look, including aspects of academics, student union activities, home and family, and leisure and health where points will be gained in those different zones. All in all, the game evokes conversation between players and gives them their own unique Chalmers story to learn and get inspired from when starting their own education.<br>
+        <i>* See Rule Booklet for more details</i>
+      </i></p><br>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/Charactercards.jpg" alt="New York" style="width:100%" width="240" height="240" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>1. All players fill in their character cards</b></p>
+            <p class="w3-opacity">Each player takes one Game piece each, with the corresponding colored Character cards including the four Score tokens for each zone on the map, and a box of colored Time tokens. 
+            </p>
+            <p>Every player starts with three time tokens that are placed in front of the Character card. Each player fills in their Character cards according to how they see themselves, and places all four score tokens on zero.</p>
+            <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button> -->
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/GettingStarted.jpg" alt="Paris" style="width:100%" width="240" height="240"  class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>2. Getting Started</b></p>
+            <p class="w3-opacity">All players then move one step to the right, and will play as that new character in front of them. Shuffle the Bonus cards and deal two cards to each player. </p>
+            <p>Each player looks at their Bonus cards and decides on which one they wish to keep. Any returned cards are placed on the bottom of the Bonus card deck, and the deck is then placed on the marked place in the middle of the board map. Before starting the game, decide on how many rounds you want to play, preferably between 10-20. The players will then place their own game piece in the middle, at Teknologgården, pointing towards the zone they will first enter.</p>
+            <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button> -->
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/Cards.jpg" alt="San Francisco" style="width:100%" width="240" height="240" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>3. Cards</b></p>
+            <p class="w3-opacity">There exist two different types of cards that could be played within the game; Event & Exam cards and Bonus cards.  </p>
+            <p><b>Event & Exam Cards</b><br>
+              The cards hold events that the players will receive during their turns, and have the opportunity to play out.* If an exam card is drawn, place it on the exam spot on the Board Map and follow the instructions on it. The exam cards apply for all players and need to be performed within 3 rounds if the players want to avoid losing points.
+            </p>
+            <p><b>Bonus Cards</b><br>
+              The Bonus cards contain goals for the player to complete in the game to earn extra points. Each player will begin the game by choosing one out of two randomly distributed Bonus cards*.
+
+            </p>
+
+            <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button> -->
+          </div>
+      </div>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/BoardGame.png" alt="Character Cards" style="width:100%" width="240" height="240" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>4. The Game Turn</b></p>
+            <p class="w3-opacity">The player that lives closest to Campus Lindholmen begins, the turns then proceeds clockwise around the table.</p>
+            <p>
+              During a turn, a player must perform one (and only one) of the following two actions:
+              <ol>
+                <li>Draw one time token.</li>
+                <li>If you want, move your game piece one step in any direction.</li>
+                <li>If you want, use your time tokens to move extra steps (one step for each token)</li>
+                <li>Draw one Event card in the zone you are currently in, and read it out loud.</li>
+                <li>If you want, play Event card(s).</li>
+              </ol>
+              <ul>
+                <li>Draw two time tokens</li>
+              </ul>
+              <b>OBS!</b> At the end of your turn, you can have a maximum of three cards on your hand. If you have more, discard cards on your hand until you do.
+              </p>
+            <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button> -->
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/BoardMap.png" alt="Paris" style="width:100%" width="240" height="240" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>5. The Board Map</b></p>
+            <p class="w3-opacity">The Board Map consists of four different zones: Academic, Student Life, Home & Family, and Leisure & Health. </p>
+            <p>Depending on which zone a player is in, it is easier to collect points from that category. Each zone includes two different types of physical buildings, most of them which exist in real life at Chalmers campus areas. Some Event cards include requirements of moving your game piece to those specific buildings in order to perform the event.</p>
+            <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button> -->
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/qrcode.png" alt="San Francisco" style="width:100%" width="240" height="240" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>6. The Game End</b></p>
+            <p class="w3-opacity">The game ends when the pre-decided amount of rounds have been played out (preferably between 10-20 rounds). </p>
+            <p>Each player then adds points from their finished Bonus cards to their Character card according to what is written on the Bonus cards.
+
+              Depending on the player’s final score in each zone, the player gets a personalized ending. To access the ending, the QR-code on the Character card is scanned and the player will get to fill in their score on a site to generate the ending. The endings tell the players a version of what life after Chalmers might be like.</p>
+            <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button> -->
+          </div>
+        </div>
+    </div>
+  </div>
+  
+
+<!-- End Page Content -->
+</div>
+
+<!-- Result Section -->
+<div class="w3-black" id="result">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+    <h2 class="w3-wide w3-center">RESULT</h2>
+    <p class="w3-opacity w3-center"><i>Curious about how your story at Chalmers end?</i></p><br>
+    <!-- <div id="container"> -->
+        <h1>Result</h1>
+          <form>
+              <label for="result1">Academic</label>
+              <select name="languages" id="result1">
+                <option value="-4">-4</option>
+                <option value="-3">-3</option>
+                <option value="-2">-2</option>
+                <option value="-1">-1</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+              </select>
+
+              <label for="result2">Student Life</label>
+              <select name="languages" id="result2">
+                <option value="-4">-4</option>
+                <option value="-3">-3</option>
+                <option value="-2">-2</option>
+                <option value="-1">-1</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+              </select>
+
+              <label for="result3">Health & Leisure</label>
+              <select name="languages" id="result3">
+                <option value="-4">-4</option>
+                <option value="-3">-3</option>
+                <option value="-2">-2</option>
+                <option value="-1">-1</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+              </select>
+
+              <label for="result4">Home & Family</label>
+              <select name="languages" id="result4">
+                <option value="-4">-4</option>
+                <option value="-3">-3</option>
+                <option value="-2">-2</option>
+                <option value="-1">-1</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+              </select>
+
+              <input type="button" value="Submit" onclick="Result();" />
+          </form>
+
+          <p id="message">Enter your score in respective zone....</p>
+  </div>
+</div>
+
+<!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="team">
+    <h2 class="w3-wide">MEET THE CREW</h2>
+    <p class="w3-opacity"><i></i></p>
+    <p class="w3-justify"></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <img src="Images/Pontus2.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        <p>Pontus Holmgren</p>
+        <p>pholmgren94@gmail.com</p>
+      </div>
+      <div class="w3-third">
+        <img src="images/Sofie2.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        <p>Sofie Åkesson</p>
+        <p>sofieakesson21@gmail.com</p>
+      </div>
+      <div class="w3-third">
+        <img src="Images/Jesper2.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        <p>Jesper Berglind</p>
+        <p>jesberg@student.chalmers.se</p>
+      </div>
+      <div class="w3-third">
+        <img src="Images/Carolina2.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        <p>Carolina Larsson</p>
+        <p>carolla@student.chalmers.se</p>
+      </div>
+      <div class="w3-third">
+        <img src="Images/Johanna2.jpg" class="w3-round" alt="Random Name" style="width:60%">
+        <p>Johanna Janebäck</p>
+        <p>johanna.janeback@hotmail.com</p>
+      </div>
+      <div class="w3-third">
+        <img src="Images/David2.jpg" class="w3-round" alt="Random Name" style="width:60%">
+        <p>David Dalsmyr</p>
+        <p>daviddalsmyr@gmail.com</p>
+      </div>
+    </div>
+  </div> 
+
+
+  <div class="w3-row-padding w3-margin-top" id="rulebooklet">
+    <div class="w3-third">
+      <div class="w3-card">
+        <img src="Images/Rule Booklet1.png" style="width:100%">
+        <div class="w3-container">
+          <h5>Components & Setting up the game</h5>
+        </div>
+      </div>
+    </div>
+  
+    <div class="w3-third">
+      <div class="w3-card">
+        <img src="Images/Rule Booklet2.png" style="width:100%">
+        <div class="w3-container">
+          <h5>Playing the game</h5>
+        </div>
+      </div>
+    </div>
+  
+    <div class="w3-third">
+      <div class="w3-card">
+        <img src="Images/Rule Booklet3.png" style="width:100%">
+        <div class="w3-container">
+          <h5>Event cards & Legend</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="w3-row-padding w3-margin-top">
+    <div class="w3-third">
+      <div class="w3-card">
+        <img src="Images/Rule Booklet4.png" style="width:100%">
+        <div class="w3-container">
+          <h5>Game end & Credits</h5>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
