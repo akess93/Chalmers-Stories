@@ -3,6 +3,10 @@
 body, html {
     height: 100%;
 }
+a {
+  color: white;
+  background:black;
+}
 
 /* The hero image */
 .hero-image {
@@ -30,7 +34,7 @@ body, html {
 }
 
 a:link, a:visited {
-  background-color: #000000;
+  background-color: black;
   color: white;
   padding: 14px 25px;
   text-align: center;
@@ -41,3 +45,17 @@ a:link, a:visited {
 a:hover, a:active {
   background-color: rgb(97, 97, 97);
 }
+
+#downloadlink {
+  background-color:white;
+  color:black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#downloadlink:hover {
+  color: green;
+}
+
